@@ -11,17 +11,17 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="static.css/stylesheet.css"
+    <link rel="stylesheet" href="static/css/style.css"
 </head>
-<body>
+<body class="bg-dark">
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
     </div>
 
     <div class="jumbotron">
-        <h1>The Truth Is Out There</h1>
+        <h1 class="display-4">The Truth Is Out There</h1>
     </div>
 
     <div class="container-fluid">
@@ -39,9 +39,47 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
+                <form class="bg-dark">
+                    <p>Filter Search</p>
+                    <ul class="list-group bg-dark">
+
+                        <li class="list-group-item bg-dark">
+                            <label for="date">Enter Date</label>
+                            <input type="text" placeholder="1/10/2010" id="datetime" />
+                        </li>
+
+
+                        <li class="list-group-item bg-dark">
+                            <label for="city">Enter City</label>
+                            <input type="text" placeholder="Anytown" id="city" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <label for="state">Enter State (e.g. ca)</label>
+                            <input type="text" placeholder="Any State" id="state" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <label for="country">Enter Country</label>
+                            <input type="text" placeholder="Any Country" id="country" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <label for="shape">Enter Shape</label>
+                            <input type="text" placeholder="Any shape (e.g. XXX)" id="shape" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
+                        </li>
+
+                    </ul>
+                </form>
 
             </div>
+
             <div class="col-md-9">
+
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -54,27 +92,15 @@
                             <th>Comments</th>
                         </tr>
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
     </div>
 
-
-    <form>
-        <p>Filter Search</p>
-    </form>
-
-    <ul class="list-group">
-        <label for="date">Enter Date</label>
-        <input type="text" placeholder="1/10/2010" id="datetime" />
-    </ul>
-
-    <li class="list-group-item">
-    </li>
-        <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-    <li class="list-group-item">
-
-    </li>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
 
 </body>
 </html>
